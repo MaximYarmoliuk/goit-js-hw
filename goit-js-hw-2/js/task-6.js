@@ -7,7 +7,9 @@ function checkForSpam(str) {
     str.toLowerCase().includes("spam")
   ) {
     result = true;
-  } else result = false;
+  } else {
+    result = false;
+  }
   return result;
 }
 
