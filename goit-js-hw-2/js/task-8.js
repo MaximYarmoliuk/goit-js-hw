@@ -6,7 +6,9 @@ const isLoginValid = function(login) {
   let result = 0;
   if (login.length >= 4 && login.length <= 16) {
     result = true;
-  } else result = false;
+  } else {
+    result = false;
+  }
   return result;
 };
 
@@ -14,7 +16,9 @@ const isLoginUnique = function(logins, login) {
   let result = 0;
   if (logins.includes(login)) {
     result = false;
-  } else result = true;
+  } else {
+    result = true;
+  }
   return result;
 };
 
