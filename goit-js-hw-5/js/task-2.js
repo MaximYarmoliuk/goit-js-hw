@@ -1,18 +1,19 @@
 "use strict";
 
-const User = function({ name, age, followers }) {
-  this.name = name;
-  this.age = age;
-  this.followers = followers;
-
-  this.getInfo = function() {
+class User {
+  constructor({ name, age, followers }) {
+    this.name = name;
+    this.age = age;
+    this.followers = followers;
+  }
+  getInfo() {
     console.log(
       `User ${this.name} is ${this.age} years old and has ${
         this.followers
       } followers`
     );
-  };
-};
+  }
+}
 
 mango = new User({ name: "Mango", age: 2, followers: 20 });
 mango.getInfo(); // User Mango is 2 years old and has 20 followers
