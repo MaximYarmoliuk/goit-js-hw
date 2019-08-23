@@ -26,30 +26,30 @@ class Car {
   }
 
   turnOn() {
-    return (this.isOn = true);
+    this.isOn = true;
   }
 
   turnOff() {
-    return (this.isOn = false), (this.speed = 0);
+    this.isOn = false;
+    this.speed = 0;
   }
 
   accelerate(value) {
     if (value <= this.maxSpeed) {
-      return (this.speed = value);
+      this.speed = value;
     }
   }
 
   decelerate(value) {
     if (value >= 0) {
-      return (this.speed = value);
+      this.speed = value;
     }
   }
 
   drive(hours) {
     if (this.isOn === true) {
-      return (this.distance += hours * this.speed);
+      this.distance += hours * this.speed;
     }
-    return this.distance;
   }
 }
 
