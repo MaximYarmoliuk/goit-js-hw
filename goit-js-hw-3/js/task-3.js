@@ -1,17 +1,18 @@
 "use strict";
 
 function findBestEmployee(employees) {
-  const values = Object.values(employees);
-  let largestNumber = values[0];
-  let indexOfTheLargestNumber = 0;
-  for (let i = 1; i < values.length; i++) {
-    if (values[i] > largestNumber) {
-      indexOfTheLargestNumber = i;
-      largestNumber = values[i];
+  const keys = Object.keys(employees);
+
+  let largestNumber = 0;
+  let name;
+
+  for (const key of keys) {
+    if (employees[key] > largestNumber) {
+      largestNumber = employees[key];
+      name = key;
     }
   }
-  const keys = Object.keys(employees);
-  return keys[indexOfTheLargestNumber];
+  return name;
 }
 
 console.log(
